@@ -6,20 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+        content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <title>Sarah Vithoria Farias | Portfólio de Artes Visuais</title>
     <meta name="description"
         content="Portfólio artístico de Sarah Vithoria Farias — estudante de Artes Visuais na FMU. Esculturas, ilustrações, têmpera, quilling e pinturas.">
     <meta name="author" content="Sarah Vithoria Farias">
+    <meta name="theme-color" content="#f8f7f4">
 
-    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Sarah" />
-    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Sarah Vithoria Farias | Portfólio de Artes Visuais">
+    <meta property="og:description"
+        content="Seleção de obras de Sarah Vithoria Farias (Artes Visuais — FMU): esculturas, ilustrações, têmpera, quilling e pinturas.">
+    <meta property="og:image" content="assets/img/obras/curling-01.webp">
+    <meta property="og:image:alt" content="Obra Curling em papel Color Plus por Sarah Vithoria Farias">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sarah Vithoria Farias | Portfólio de Artes Visuais">
+    <meta name="twitter:description"
+        content="Seleção de obras de Sarah Vithoria Farias: esculturas, ilustrações, têmpera, quilling e pinturas.">
+    <meta name="twitter:image" content="assets/img/obras/curling-01.webp">
+
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Sarah Farias">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,11 +48,12 @@
 </head>
 
 <body class="bg-gallery text-ink">
+    <a href="#sobre" class="skip-link visually-hidden-focusable">Pular para o conteúdo principal</a>
 
     <header class="sticky-top bg-gallery-blur border-bottom border-subtle">
         <nav class="navbar navbar-expand-md py-3" aria-label="Navegação principal">
             <div class="container">
-                <a class="navbar-brand font-serif fw-bold fs-4 tracking-wide text-ink" href="#inicio">
+                <a class="navbar-brand font-serif fw-bold fs-4 tracking-wide text-ink" href="#sobre">
                     SARAH VITHORIA
                 </a>
                 <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
@@ -49,7 +64,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
                     <ul class="navbar-nav gap-md-4 pt-3 pt-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#sobre">Sobre</a>
+                            <a class="nav-link active" href="#sobre" aria-current="true">Sobre</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#obras">Obras</a>
@@ -63,14 +78,14 @@
         </nav>
     </header>
 
-    <main id="inicio">
+    <main id="conteudo-principal">
 
         <section id="sobre" class="py-5 py-lg-6 border-bottom border-subtle">
             <div class="container">
                 <div class="row align-items-center g-4 g-lg-5">
                     <div class="col-12 col-lg-7 order-2 order-lg-1">
                         <span
-                            class="badge rounded-pill text-bg-light border px-3 py-2 mb-3 text-uppercase tracking-wider small fw-medium">
+                            class="badge rounded-pill text-bg-light border px-3 py-2 mb-3 text-uppercase tracking-wider small fw-medium accent-badge">
                             Artes Visuais • FMU
                         </span>
                         <h1 class="display-4 font-serif fw-bold mb-3 lh-sm">
@@ -94,9 +109,10 @@
 
                     <div class="col-12 col-lg-5 order-1 order-lg-2 text-center">
                         <div class="hero-art-frame p-3 p-sm-4 rounded-4 bg-white shadow-sm">
-                            <img src="assets/img/obras/curling-01.jpg"
+                            <img src="assets/img/obras/curling-01.webp"
                                 alt="Obra Curling em papel Color Plus por Sarah Vithoria Farias"
-                                class="img-fluid rounded-3 protected-art" decoding="async">
+                                class="img-fluid rounded-3 protected-art" width="1200" height="1600"
+                                fetchpriority="high" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -106,194 +122,35 @@
         <section id="obras" class="py-5 py-lg-6">
             <div class="container">
                 <div class="row mb-4 align-items-end">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-lg-5">
                         <h2 class="display-6 font-serif fw-bold mb-1">Acervo &amp; Técnicas</h2>
                         <p class="text-muted-ink mb-0">Selecione uma categoria ou clique na obra para ampliar.</p>
                     </div>
 
-                    <div class="col-12 col-md-6 mt-3 mt-md-0">
-                        <div class="d-flex flex-nowrap flex-md-wrap justify-content-md-end gap-2 overflow-auto pb-2 pb-md-0"
+                    <div class="col-12 col-lg-7 mt-3 mt-lg-0">
+                        <div class="d-flex flex-nowrap flex-md-wrap justify-content-lg-end gap-2 overflow-auto pb-2 pb-md-0"
                             role="group" aria-label="Filtrar obras por técnica">
                             <button type="button" class="btn btn-sm btn-dark rounded-pill px-3 filter-btn active"
-                                data-filter="all">Todas (8)</button>
+                                data-filter="all" aria-pressed="true">Todas (8)</button>
                             <button type="button" class="btn btn-sm btn-outline-dark rounded-pill px-3 filter-btn"
-                                data-filter="escultura">Escultura &amp; Objeto</button>
+                                data-filter="escultura" aria-pressed="false">Escultura &amp; Objeto (2)</button>
                             <button type="button" class="btn btn-sm btn-outline-dark rounded-pill px-3 filter-btn"
-                                data-filter="pintura">Pintura &amp; Pastel</button>
+                                data-filter="pintura" aria-pressed="false">Pintura &amp; Pastel (3)</button>
                             <button type="button" class="btn btn-sm btn-outline-dark rounded-pill px-3 filter-btn"
-                                data-filter="papel">Papel &amp; Ilustração</button>
+                                data-filter="papel" aria-pressed="false">Papel &amp; Ilustração (3)</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="row g-4" id="galeria-grid">
+                <p id="galeria-status" class="visually-hidden" aria-live="polite"></p>
 
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="papel">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Curling" data-technique="Papel Color Plus"
-                            data-description="Exploração tridimensional de volume, luz, sombra e ritmo cromático através da técnica de quilling/curling em papel Color Plus."
-                            data-images="assets/img/obras/curling-01.jpg,assets/img/obras/curling-02.jpg">
-                            <div class="art-thumb-wrapper">
-                                <img src="assets/img/obras/curling-01.jpg" class="card-img-top protected-art"
-                                    alt="Curling - Papel Color Plus" loading="lazy" decoding="async">
-                                <span
-                                    class="badge bg-dark bg-opacity-75 position-absolute top-0 end-0 m-3 rounded-pill">2
-                                    fotos</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Papel
-                                    &amp; Relevo</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Curling</h3>
-                                <p class="small text-muted-ink mb-0">Papel Color Plus</p>
-                            </div>
-                        </div>
-                    </article>
+                <div class="row g-4" id="galeria-grid"></div>
 
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="escultura">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Luminária: O Grito"
-                            data-technique="Biscuit, tinta guache e tinta à base de ovo"
-                            data-description="Escultura funcional que investiga a tensão expressiva e o contraste entre luz interna e opacidade da matéria."
-                            data-images="assets/img/obras/luminaria-grito-01.png,assets/img/obras/luminaria-grito-02.png">
-                            <div class="art-thumb-wrapper is-cutout">
-                                <img src="assets/img/obras/luminaria-grito-01.png" class="card-img-top protected-art"
-                                    alt="Luminária: O Grito" loading="lazy" decoding="async">
-                                <span
-                                    class="badge bg-dark bg-opacity-75 position-absolute top-0 end-0 m-3 rounded-pill">2
-                                    fotos</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Escultura
-                                    &amp; Luz</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Luminária: O Grito</h3>
-                                <p class="small text-muted-ink mb-0">Biscuit, tinta guache e tinta à base de ovo</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="papel">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Harmonias Cromáticas"
-                            data-technique="Papel Color Plus (Recorte e Colagem)"
-                            data-description="Série de estudos de contraste simultâneo, temperatura e interação entre cores complementares e análogas."
-                            data-images="assets/img/obras/harmonias-cromaticas-01.jpg,assets/img/obras/harmonias-cromaticas-02.jpg,assets/img/obras/harmonias-cromaticas-03.jpg">
-                            <div class="art-thumb-wrapper">
-                                <img src="assets/img/obras/harmonias-cromaticas-01.jpg"
-                                    class="card-img-top protected-art" alt="Harmonias Cromáticas - Papel Color Plus"
-                                    loading="lazy" decoding="async">
-                                <span
-                                    class="badge bg-dark bg-opacity-75 position-absolute top-0 end-0 m-3 rounded-pill">3
-                                    fotos</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Teoria da
-                                    Cor</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Harmonias Cromáticas</h3>
-                                <p class="small text-muted-ink mb-0">Papel Color Plus</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="pintura">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Têmpera Ovo"
-                            data-technique="Ovo, corante e óleo essencial sob madeira"
-                            data-description="Pesquisa de técnicas pictóricas históricas utilizando emulsão natural de gema de ovo e pigmentos sobre suporte de madeira."
-                            data-images="assets/img/obras/tempera-ovo-01.png">
-                            <div class="art-thumb-wrapper is-cutout">
-                                <img src="assets/img/obras/tempera-ovo-01.png" class="card-img-top protected-art"
-                                    alt="Têmpera Ovo sob madeira" loading="lazy" decoding="async">
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Pintura
-                                    Histórica</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Têmpera Ovo</h3>
-                                <p class="small text-muted-ink mb-0">Ovo, corante e óleo essencial sob madeira</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="papel">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Livro de Artista"
-                            data-technique="Lápis aquarelável, caneta nanquim e papel 200g"
-                            data-description="Narrativas visuais que transitam entre a cultura urbana paulistana, cotidiano e simbolismo gráfico."
-                            data-images="assets/img/obras/masp-01.jpg,assets/img/obras/moto-01.jpg,assets/img/obras/pecado-01.jpg">
-                            <div class="art-thumb-wrapper">
-                                <img src="assets/img/obras/masp-01.jpg" class="card-img-top protected-art"
-                                    alt="Livro de Artista - Lápis aquarelável e nanquim" loading="lazy"
-                                    decoding="async">
-                                <span
-                                    class="badge bg-dark bg-opacity-75 position-absolute top-0 end-0 m-3 rounded-pill">3
-                                    fotos</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Ilustração
-                                    &amp; Narrativa</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Livro de Artista</h3>
-                                <p class="small text-muted-ink mb-0">Lápis aquarelável, caneta nanquim e papel 200g</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="escultura">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Escultura" data-technique="Argila, engobe, verniz/esmalte e pregos"
-                            data-description="Composição cerâmica que contrapõe a organicidade da argila esmaltada à rigidez industrial do metal."
-                            data-images="assets/img/obras/escultura-pregos-01.png">
-                            <div class="art-thumb-wrapper is-cutout">
-                                <img src="assets/img/obras/escultura-pregos-01.png" class="card-img-top protected-art"
-                                    alt="Escultura em argila e pregos" loading="lazy" decoding="async">
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Cerâmica
-                                    &amp; Objeto</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Escultura</h3>
-                                <p class="small text-muted-ink mb-0">Argila, engobe, verniz/esmalte e pregos</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="pintura">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Snoop Dogg" data-technique="Giz pastel sob papel Color Plus"
-                            data-description="Retrato monocromático explorando luz, textura e movimento atmosférico com giz pastel seco sobre papel azul."
-                            data-images="assets/img/obras/snoop-dogg-01.jpg">
-                            <div class="art-thumb-wrapper">
-                                <img src="assets/img/obras/snoop-dogg-01.jpg" class="card-img-top protected-art"
-                                    alt="Snoop Dogg - Giz pastel sob Color Plus" loading="lazy" decoding="async">
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Retrato
-                                    &amp; Pastel</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Snoop Dogg</h3>
-                                <p class="small text-muted-ink mb-0">Giz pastel sob Color Plus</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="col-12 col-sm-6 col-lg-4 art-item" data-category="pintura">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden art-card" role="button"
-                            tabindex="0" data-title="Discos" data-technique="Tinta acrílica sob disco de vinil"
-                            data-description="Ressignificação de suporte analógico através da pintura acrílica com temática celestial e dualidade entre Sol e Lua."
-                            data-images="assets/img/obras/disco-01.png,assets/img/obras/disco-02.png">
-                            <div class="art-thumb-wrapper is-cutout">
-                                <img src="assets/img/obras/disco-01.png" class="card-img-top protected-art"
-                                    alt="Discos - Tinta acrílica sob disco de vinil" loading="lazy" decoding="async">
-                                <span
-                                    class="badge bg-dark bg-opacity-75 position-absolute top-0 end-0 m-3 rounded-pill">2
-                                    fotos</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <span class="text-uppercase small text-muted-ink tracking-wider d-block mb-1">Suporte
-                                    Alternativo</span>
-                                <h3 class="h5 font-serif fw-bold mb-1">Discos</h3>
-                                <p class="small text-muted-ink mb-0">Tinta acrílica sob disco de vinil</p>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
+                <noscript>
+                    <p class="text-muted-ink mt-3">
+                        Ative o JavaScript no navegador para visualizar e filtrar a galeria interativa de obras.
+                    </p>
+                </noscript>
             </div>
         </section>
     </main>
@@ -301,18 +158,22 @@
     <footer id="contato" class="py-5 bg-white border-top border-subtle">
         <div class="container text-center">
             <h2 class="h3 font-serif fw-bold mb-2">Contato &amp; Comissões</h2>
-            <p class="text-muted-ink mb-4 mx-auto" style="max-width: 520px;">
+            <p class="text-muted-ink mb-4 mx-auto footer-lead">
                 Interessado em exposições, colaborações ou encomendas artísticas? Entre em contato pelas redes abaixo.
             </p>
-            <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-3">
                 <a href="https://www.linkedin.com/in/sarah-vithoria-farias-3789b132b" target="_blank"
                     rel="noopener noreferrer" class="btn btn-outline-dark rounded-pill px-4">
                     LinkedIn
                 </a>
-                <a href="mailto:vsarah974@gmail.com" class="btn btn-dark rounded-pill px-4">
-                    vsarah974@gmail.com
+                <a id="email-link" href="#contato" class="btn btn-dark rounded-pill px-4">
+                    Enviar E-mail
                 </a>
+                <button type="button" id="copy-email-btn" class="btn btn-outline-dark rounded-pill px-4">
+                    Copiar E-mail
+                </button>
             </div>
+            <p id="copy-feedback" class="small text-accent fw-medium mb-3" aria-live="polite"></p>
             <p class="small text-muted-ink mb-0">
                 &copy; <span id="ano-atual"></span> Sarah Vithoria Farias. Todos os direitos reservados sobre as obras.
             </p>
@@ -322,18 +183,22 @@
     <div class="modal fade" id="obraModal" tabindex="-1" aria-labelledby="obraModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
-                <div class="modal-header border-bottom-0 pb-0 px-4 pt-4">
+                <div class="modal-header border-bottom-0 pb-0 px-4 pt-4 align-items-start">
                     <div>
                         <span id="modal-tecnica"
                             class="text-uppercase small text-muted-ink tracking-wider d-block"></span>
                         <h3 class="modal-title h4 font-serif fw-bold" id="obraModalLabel"></h3>
                     </div>
-                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
-                        aria-label="Fechar"></button>
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                        <span id="modal-slide-counter"
+                            class="badge rounded-pill text-bg-light border fw-medium d-none"></span>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                            aria-label="Fechar"></button>
+                    </div>
                 </div>
                 <div class="modal-body p-4">
-                    <div id="carouselObra" class="carousel slide bg-light rounded-3 overflow-hidden mb-3"
-                        data-bs-ride="false">
+                    <div id="carouselObra" class="carousel slide bg-light rounded-3 overflow-hidden mb-3">
+                        <div class="carousel-indicators" id="modal-carousel-indicators"></div>
                         <div class="carousel-inner" id="modal-carousel-inner"></div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselObra"
                             data-bs-slide="prev" id="btn-prev-slide">
@@ -348,7 +213,13 @@
                             <span class="visually-hidden">Próxima</span>
                         </button>
                     </div>
-                    <p id="modal-descricao" class="text-muted-ink mb-0"></p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-3">
+                        <p id="modal-descricao" class="text-muted-ink mb-0"></p>
+                        <a id="modal-interesse-btn" href="#contato"
+                            class="btn btn-sm btn-outline-dark rounded-pill px-3 text-nowrap">
+                            Consultar obra
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -356,9 +227,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous" defer></script>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/obras.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
 </body>
 
 </html>
